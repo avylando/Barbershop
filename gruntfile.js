@@ -14,6 +14,29 @@ module.exports = function (grunt) {
       }
     },
 
+    pug: {
+      compile: {
+        options: {
+          pretty: true,
+          data: {
+            debug: false
+          }
+        },
+
+        files: [{
+          cwd: 'templates',
+          src: '**/*.pug',
+          dest: 'build',
+          expand: true,
+          ext: '.html'
+
+          // 'index.html': 'templates/index.pug',
+          // 'photo.html': 'templates/photo.pug',
+          // 'form.html': 'templates/form.pug'
+        }]
+      }
+    },
+
     postcss: {
       options: {
         processors: [
@@ -45,24 +68,8 @@ module.exports = function (grunt) {
 
       sprite: {
         files: {
-          "build/img/sprite.svg": ["img/**/icon-*.svg", "img/**/logo-*.svg"]
+          "img/sprite.svg": ["img/**/icon-*.svg", "img/**/logo-*.svg"]
         }
-      }
-    },
-
-    posthtml: {
-      options: {
-        use: [
-          require("posthtml-include")()
-        ]
-      },
-
-      html: {
-        files: [{
-          expand: true,
-          src: ["*.html"],
-          dest: "build"
-        }]
       }
     },
 
@@ -76,8 +83,8 @@ module.exports = function (grunt) {
 
     watch: {
       html: {
-        files: ["*.html"],
-        tasks: ["posthtml"]
+        files: ['templates/**/*.pug'],
+        tasks: ['pug']
       },
 
       style: {
@@ -170,7 +177,7 @@ module.exports = function (grunt) {
     "postcss",
     "csso",
     "svgstore",
-    "posthtml",
+    "pug",
     "jsminify"
   ]);
 };
