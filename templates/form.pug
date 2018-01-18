@@ -1,80 +1,83 @@
-<!DOCTYPE html>
-html(lang="ru")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    title Записаться
-  body
-    include blocks/header.pug
+extends blocks/layout.pug
+block title
+  title Записаться
+block menu
+  li.page-header__menu-item
+    a.page-header__menu-link(href="index.html") Главная
+  li.page-header__menu-item
+    a.page-header__menu-link(href="photo.html") Наши работы
+  li.page-header__menu-item.page-header__menu-item--active
+    a.page-header__menu-link(href="form.html") Записаться
+  li.page-header__menu-item
+    a.page-header__menu-link(href="http://") Контакты
+  li.page-header__menu-item
+    a.page-header__menu-link(href="http://") HTML Academy
+block content
 
-    main
-      div(style="display: none")
-        include ../img/sprite.svg
+  main
+    div(style="display: none")
+      include ../img/sprite.svg
 
-      .container
-        section.title-block
-          .title-block__wrapper
-            h1.title-block__title Записаться
-            a(href="index.html").title-block__button.button На главную
+    .container
+      section.title-block
+        .title-block__wrapper
+          h1.title-block__title Записаться
+          a(href="index.html").title-block__button.button На главную
 
-        section.fields
-          form.fields__form(action='https://echo.htmlacademy.ru', method='get')
-            .fields__wrapper
-              .fields__set
-                input.fields__textfield(type="text", name="username", placeholder="Имя")
-                input.fields__textfield(type="text", name="surname", placeholder="Фамилия")
-                input.fields__textfield(type="text", name="secondname", placeholder="Отчество")
-              .fields__set
-                input.fields__textfield(type="text", name="phone", placeholder="Контактный телефон")
-                input.fields__textfield(type="text", name="email", placeholder="Контактный e-mail")
-              .fields__set
-                textarea.fields__textarea(placeholder="Доп. информация для мастера")
-              .fields__set
-                h2.fields__title Выберите модель бороды
-                ul.fields__list.models-list
-                  li.models-list__item
-                    input.models-list__input(type="radio", name="model" value="admiral" id="admiral", checked)
-                    label.models-list__label(for="admiral") Адмирал
-                    svg.models-list__icon
-                  li.models-list__item
-                    input.models-list__input(type="radio", name="model", value="lumberjack", id="lumberjack")
-                    label.models-list__label(for="lumberjack") Лесоруб
-                    svg.models-list__icon
-                  li.models-list__item
-                    input.models-list__input(type="radio", name="model", value="polar", id="polar")
-                    label.models-list__label(for="polar") Полярник
-                    svg.models-list__icon
-                  li.models-list__item
-                    input.models-list__input(type="radio", name="model", value="boyar", id="boyar")
-                    label.models-list__label(for="boyar") Боярин
-                    svg.models-list__icon
-                  li.models-list__item
-                    input.models-list__input(type="radio", name="model", value="sage", id="sage")
-                    label.models-list__label(for="sage") Мудрец
-                    svg.models-list__icon
-              .fields__set
-                h2.fields__title Дополнительные услуги
-                ul.fields_list.services-list
-                  li.services-list__item
-                    input.services-list__input(type="checkbox", name="colorize-beard", id="colorize-beard", checked)
-                    label.services-list__label(for="colorize-beard") Подкрасить бороду
-                  li.services-list__item
-                    input.services-list__input(type="checkbox", name="comb-out-beard", id="comb-out-beard")
-                    label.services-list__label(for="comb-out-beard") Причесать бороду
-                  li.services-list__item
-                    input.services-list__input(type="checkbox", name="gray-out-beard", id="gray-out-beard")
-                    label.services-list__label(for="gray-out-beard") Убрать седину
-                  li.services-list__item
-                    input.services-list__input(type="checkbox", name="mustache-twist", id="mustache-twist", checked)
-                    label.services-list__label(for="mustache-twist") Накрутить усы
-                  li.services-list__item
-                    input.services-list__input(type="checkbox", name="straighten-hair", id="straighten-hair")
-                    label.services-list__label(for="straighten-hair") Подровнять виски
-                  li.services-list__item
-                    input.services-list__input(type="checkbox", name="polish-bald", id="polish-bald")
-                    label.services-list__label(for="polish-bald") Отполировать лысину
-            button.fields__button(type="submit") Отправить заявку
-
-        include blocks/footer.pug
-
+      section.fields
+        form.fields__form(action='https://echo.htmlacademy.ru', method='get')
+          .fields__wrapper
+            .fields__set
+              input.fields__textfield(type="text", name="username", placeholder="Имя")
+              input.fields__textfield(type="text", name="surname", placeholder="Фамилия")
+              input.fields__textfield(type="text", name="secondname", placeholder="Отчество")
+            .fields__set
+              input.fields__textfield(type="text", name="phone", placeholder="Контактный телефон")
+              input.fields__textfield(type="text", name="email", placeholder="Контактный e-mail")
+            .fields__set
+              textarea.fields__textarea(placeholder="Доп. информация для мастера")
+            .fields__set
+              h2.fields__title Выберите модель бороды
+              ul.fields__list.models-list
+                li.models-list__item
+                  input.models-list__input(type="radio", name="model" value="admiral" id="admiral", checked)
+                  label.models-list__label(for="admiral") Адмирал
+                  svg.models-list__icon
+                li.models-list__item
+                  input.models-list__input(type="radio", name="model", value="lumberjack", id="lumberjack")
+                  label.models-list__label(for="lumberjack") Лесоруб
+                  svg.models-list__icon
+                li.models-list__item
+                  input.models-list__input(type="radio", name="model", value="polar", id="polar")
+                  label.models-list__label(for="polar") Полярник
+                  svg.models-list__icon
+                li.models-list__item
+                  input.models-list__input(type="radio", name="model", value="boyar", id="boyar")
+                  label.models-list__label(for="boyar") Боярин
+                  svg.models-list__icon
+                li.models-list__item
+                  input.models-list__input(type="radio", name="model", value="sage", id="sage")
+                  label.models-list__label(for="sage") Мудрец
+                  svg.models-list__icon
+            .fields__set
+              h2.fields__title Дополнительные услуги
+              ul.fields_list.services-list
+                li.services-list__item
+                  input.services-list__input(type="checkbox", name="colorize-beard", id="colorize-beard", checked)
+                  label.services-list__label(for="colorize-beard") Подкрасить бороду
+                li.services-list__item
+                  input.services-list__input(type="checkbox", name="comb-out-beard", id="comb-out-beard")
+                  label.services-list__label(for="comb-out-beard") Причесать бороду
+                li.services-list__item
+                  input.services-list__input(type="checkbox", name="gray-out-beard", id="gray-out-beard")
+                  label.services-list__label(for="gray-out-beard") Убрать седину
+                li.services-list__item
+                  input.services-list__input(type="checkbox", name="mustache-twist", id="mustache-twist", checked)
+                  label.services-list__label(for="mustache-twist") Накрутить усы
+                li.services-list__item
+                  input.services-list__input(type="checkbox", name="straighten-hair", id="straighten-hair")
+                  label.services-list__label(for="straighten-hair") Подровнять виски
+                li.services-list__item
+                  input.services-list__input(type="checkbox", name="polish-bald", id="polish-bald")
+                  label.services-list__label(for="polish-bald") Отполировать лысину
+          button.fields__button(type="submit") Отправить заявку

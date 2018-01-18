@@ -1,127 +1,131 @@
-<!DOCTYPE html>
-html(lang="ru")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    title Барбершоп "Бородинский"
-  body
-    include blocks/header.pug
-    main
-      div(style="display: none")
-        include ../img/sprite.svg
+extends blocks/layout.pug
+block title
+  title Барбершоп "Бородинский"
+block menu
+  li.page-header__menu-item.page-header__menu-item--active
+    a.page-header__menu-link(href="index.html") Главная
+  li.page-header__menu-item
+    a.page-header__menu-link(href="photo.html") Наши работы
+  li.page-header__menu-item
+    a.page-header__menu-link(href="form.html") Записаться
+  li.page-header__menu-item
+    a.page-header__menu-link(href="http://") Контакты
+  li.page-header__menu-item
+    a.page-header__menu-link(href="http://") HTML Academy
+block content
+  main
+    div(style="display: none")
+      include ../img/sprite.svg
 
-      h1.visually-hidden Барбершоп "Бородинский"
-      section.head-block
-        .container
-          .head-block__wrapper
-            .head-block__description
-              h2.head-block__title Стрижка у нас это выгодно!
-              p.head-block__text.
-                Мужская стрижка требует точного подхода.
-                Обратимся к статистике:
-            .head-block__stats
-              .head-block__stat-block
-                h2.head-block__stat-title 1 500 *
-                p.head-block__stat-text рублей вложений
-              .head-block__stat-block
-                h2.head-block__stat-title 7 200
-                p.head-block__stat-text секунд времени мастера
-              .head-block__stat-block
-                h2.head-block__stat-title 90 000
-                p.head-block__stat-text постриженных волос
-              .head-block__stat-block
-                h2.head-block__stat-title 500 000 *
-                p.head-block__stat-text лайков и комплиментов
-            .head-block__joke
-              p.head-block__joke-text * - приведённые данные ложь
+    h1.visually-hidden Барбершоп "Бородинский"
+    section.head-block
+      .container
+        .head-block__wrapper
+          .head-block__description
+            h2.head-block__title Стрижка у нас это выгодно!
+            p.head-block__text.
+              Мужская стрижка требует точного подхода.
+              Обратимся к статистике:
+          .head-block__stats
+            .head-block__stat-block
+              h2.head-block__stat-title 1 500 *
+              p.head-block__stat-text рублей вложений
+            .head-block__stat-block
+              h2.head-block__stat-title 7 200
+              p.head-block__stat-text секунд времени мастера
+            .head-block__stat-block
+              h2.head-block__stat-title 90 000
+              p.head-block__stat-text постриженных волос
+            .head-block__stat-block
+              h2.head-block__stat-title 500 000 *
+              p.head-block__stat-text лайков и комплиментов
+          .head-block__joke
+            p.head-block__joke-text * - приведённые данные ложь
 
-      section.advantages
-        .container
-          .advantages__wrapper
-            .advantages__block
-              .advantages__illustration
-                img.advantages__icon(src='img/advantage-1.png', alt='Fast', width='95', height='94')
-              h2.advantages__title Быстро
-              p.advantages__text.
-                Мы делаем свою работу быстро!
-                Два часа пролетят незаметно и Вы — счастливый обладатель стильной стрижки-минутки
-            .advantages__block
-              .advantages__illustration
-                img.advantages__icon(src='img/advantage-2.png', alt='Cool', width='95', height='88')
-              h2.advantages__title Круто
-              p.advantages__text.
-                Забудьте, как вы стриглись раньше. Мы сделаем из Вас звезду футбола или кино.
-                Во всяком случае внешне.
-            .advantages__block
-              .advantages__illustration
-                img.advantages__icon(src='img/advantage-3.png', alt='Expensive', width='95', height='91')
-              h2.advantages__title Дорого
-              p.advantages__text.
-                Наши мастера — профессионалы своего дела и не могут стоить дёшево.
-                К тому же, разве цена не даёт определённый статус?
-          .advantages__nav
-            ul.nav-list
-              li.nav-list__item
-                a(href="http://")
-              li.nav-list__item
-                a(href="http://")
-              li.nav-list__item
-                a(href="http://")
+    section.advantages
+      .container
+        .advantages__wrapper
+          .advantages__block
+            .advantages__illustration
+              img.advantages__icon(src='img/advantage-1.png', alt='Fast', width='95', height='94')
+            h2.advantages__title Быстро
+            p.advantages__text.
+              Мы делаем свою работу быстро!
+              Два часа пролетят незаметно и Вы — счастливый обладатель стильной стрижки-минутки
+          .advantages__block
+            .advantages__illustration
+              img.advantages__icon(src='img/advantage-2.png', alt='Cool', width='95', height='88')
+            h2.advantages__title Круто
+            p.advantages__text.
+              Забудьте, как вы стриглись раньше. Мы сделаем из Вас звезду футбола или кино.
+              Во всяком случае внешне.
+          .advantages__block
+            .advantages__illustration
+              img.advantages__icon(src='img/advantage-3.png', alt='Expensive', width='95', height='91')
+            h2.advantages__title Дорого
+            p.advantages__text.
+              Наши мастера — профессионалы своего дела и не могут стоить дёшево.
+              К тому же, разве цена не даёт определённый статус?
+        .advantages__nav
+          ul.nav-list
+            li.nav-list__item
+              a(href="http://")
+            li.nav-list__item
+              a(href="http://")
+            li.nav-list__item
+              a(href="http://")
 
-      section.news
-        .container
-          .news__wrapper
-            h2.news__title Новости и акции
-            .news__block
-              .news__illustration
-                img.news__icon(src='img/calendar-1.png', alt='29 сентября', width='50', height='60')
-              p.news__text.
-                Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.
-            .news__block
-              .news__illustration
-                img.news__icon(src='img/calendar-2.png', alt='19 сентября', width='50', height='60')
-              p.news__text.
-                В нашей команде пополнение, Борис «Бритва» Стригунец,
-                обладатель множества титулов и наград пополнил наши стройные ряды. Спешите записаться!
-            .news__block
-              .news__illustration
-                img.news__icon(src='img/calendar-3.png', alt='9 сентября', width='50', height='60')
-              p.news__text.
-                Все дорожает, а наши стрижки нет! Как так?
-                Приходите, постригитесь и узнаете, в чем здесь подвох!
-            .news__button-block
-              button.news__button.button(type='button') Показать все
+    section.news
+      .container
+        .news__wrapper
+          h2.news__title Новости и акции
+          .news__block
+            .news__illustration
+              img.news__icon(src='img/calendar-1.png', alt='29 сентября', width='50', height='60')
+            p.news__text.
+              Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.
+          .news__block
+            .news__illustration
+              img.news__icon(src='img/calendar-2.png', alt='19 сентября', width='50', height='60')
+            p.news__text.
+              В нашей команде пополнение, Борис «Бритва» Стригунец,
+              обладатель множества титулов и наград пополнил наши стройные ряды. Спешите записаться!
+          .news__block
+            .news__illustration
+              img.news__icon(src='img/calendar-3.png', alt='9 сентября', width='50', height='60')
+            p.news__text.
+              Все дорожает, а наши стрижки нет! Как так?
+              Приходите, постригитесь и узнаете, в чем здесь подвох!
+          .news__button-block
+            button.news__button.button(type='button') Показать все
 
-      section.reviews
-        .container
-          h2.rewiews__title Отзывы о нас
-          .reviews__wrapper
+    section.reviews
+      .container
+        h2.rewiews__title Отзывы о нас
+        .reviews__wrapper
+          .reviews__block
+            img.reviews__image(src='img/tattoo-man-mobile@1x.jpg', alt='Трэвис Баркер', width='50', height='49')
             .reviews__block
-              img.reviews__image(src='img/tattoo-man-mobile@1x.jpg', alt='Трэвис Баркер', width='50', height='49')
-              .reviews__block
-                h3.reviews__name Трэвис Баркер
-                p.reviews__text.
-                  Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!
+              h3.reviews__name Трэвис Баркер
+              p.reviews__text.
+                Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!
+          .reviews__block
+            img.reviews__image(src='img/tattoo-man-mobile@1x.jpg', alt='Трэвис Баркер', width='50', height='49')
             .reviews__block
-              img.reviews__image(src='img/tattoo-man-mobile@1x.jpg', alt='Трэвис Баркер', width='50', height='49')
-              .reviews__block
-                h3.reviews__name Трэвис Баркер
-                p.reviews__text.
-                  Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!
+              h3.reviews__name Трэвис Баркер
+              p.reviews__text.
+                Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!
+          .reviews__block
+            img.reviews__image(src='img/tattoo-man-mobile@1x.jpg', alt='Трэвис Баркер', width='50', height='49')
             .reviews__block
-              img.reviews__image(src='img/tattoo-man-mobile@1x.jpg', alt='Трэвис Баркер', width='50', height='49')
-              .reviews__block
-                h3.reviews__name Трэвис Баркер
-                p.reviews__text.
-                  Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!
-          .reviews__nav
-            ul.nav-list
-              li.nav-list__item
-                a(href="http://")
-              li.nav-list__item
-                a(href="http://")
-              li.nav-list__item
-                a(href="http://")
-
-    include blocks/footer.pug
+              h3.reviews__name Трэвис Баркер
+              p.reviews__text.
+                Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!
+        .reviews__nav
+          ul.nav-list
+            li.nav-list__item
+              a(href="http://")
+            li.nav-list__item
+              a(href="http://")
+            li.nav-list__item
+              a(href="http://")

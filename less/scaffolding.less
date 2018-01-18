@@ -1,0 +1,58 @@
+@font-face {
+  font-weight: normal;
+  font-family: 'PT Sans Narrow';
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/ptsansnarrow.woff2') format('woff2'), url('../fonts/ptsansnarrow.woff') format('woff');
+}
+
+@font-face {
+  font-weight: bold;
+  font-family: 'PT Sans Narrow';
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/ptsansnarrowbold.woff2') format('woff2'), url('../fonts/ptsansnarrowbold.woff') format('woff');
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'PT Sans Narrow', 'Tahoma', sans-serif;
+  font-size: 18px;
+  line-height: 27px;
+  color: #000000;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important;
+	width: 1px !important;
+	overflow: hidden;
+}
+
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+}

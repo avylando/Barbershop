@@ -2,27 +2,38 @@ header.page-header
   .container
     .page-header__wrapper
       .page-header__logo
-        svg.page-header__logo-icon.page-header__logo-icon--mobile
+        svg.page-header__logo-icon.page-header__logo-icon--mobile(width='227', height='30')
           use(xlink:href='#logo-mobile')
         svg.page-header__logo-icon.page-header__logo-icon--tablet
           use(xlink:href='#logo-tablet')
         svg.page-header__logo-icon.page-header__logo-icon--desktop
           use(xlink:href='#logo-desktop')
-      nav.page-header__nav.page-header__nav--main
-        ul.page-header__menu.menu
-          li.menu__item
-            a.menu__item-link(href="index.html") Главная
-          li.menu__item
-            a.menu__item-link(href="photo.html") Наши работы
-          li.menu__item
-            a.menu__item-link(href="form.html") Записаться
-          li.menu__item
-            a.menu__item-link(href="http://") Контакты
-          li.menu__item
-            a.menu__item-link(href="http://") HTML Academy
-      nav.page-header__nav.page-header__nav--user
-        ul.page-header__user-menu
-          li.page-header__user-menu-item
-            a.menu__item-link(href="#")
-          li.page-header__user-menu-item
-            a.menu__item-link(href="#")
+      .page-header__nav-wrapper
+
+        nav.page-header__nav
+          ul.page-header__menu.page-header__menu--main
+            block menu
+              li.page-header__menu-item
+                a.page-header__menu-link(href="index.html") Главная
+              li.page-header__menu-item
+                a.page-header__menu-link(href="photo.html") Наши работы
+              li.page-header__menu-item
+                a.page-header__menu-link(href="form.html") Записаться
+              li.page-header__menu-item
+                a.page-header__menu-link(href="http://") Контакты
+              li.page-header__menu-item
+                a.page-header__menu-link(href="http://") HTML Academy
+
+          ul.page-header__menu.page-header__menu--user
+            li.page-header__menu-item.page-header__menu-item--login
+              img.page-header__menu-icon(src='img/login-icon.png', width='16', height='16')
+              a.page-header__menu-link(href="#") Вход
+            li.page-header__menu-item
+              a.page-header__menu-link(href="#")
+
+        .page-header__button-block
+          button.page-header__burger(type='button')
+            span
+            span
+            span
+            span

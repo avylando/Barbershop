@@ -1,122 +1,125 @@
-<!DOCTYPE html>
-html(lang="ru")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    title Наши работы
-  body
-    include blocks/header.pug
+extends blocks/layout.pug
+block title
+  title Наши работы
+block menu
+  li.page-header__menu-item
+    a.page-header__menu-link(href="index.html") Главная
+  li.page-header__menu-item.page-header__menu-item--active
+    a.page-header__menu-link(href="photo.html") Наши работы
+  li.page-header__menu-item
+    a.page-header__menu-link(href="form.html") Записаться
+  li.page-header__menu-item
+    a.page-header__menu-link(href="http://") Контакты
+  li.page-header__menu-item
+    a.page-header__menu-link(href="http://") HTML Academy
+block content
+  main
+    div(style="display: none")
+      include ../img/sprite.svg
 
-    main
-      div(style="display: none")
-        include ../img/sprite.svg
+    section.title-block
+      .container
+        .title-block__wrapper
+          h1.title-block__title Наши работы
+          a(href="index.html").title-block__button.button На главную
 
-      section.title-block
-        .container
-          .title-block__wrapper
-            h1.title-block__title Наши работы
-            a(href="index.html").title-block__button.button На главную
+    section.catalog
+      .container
+        article.catalog__card.card.card--main
+          .card__label
+            span.card__label-caption Работа месяца
+          .card__illustration
+            img(src='img/pyotr-mobile@1x.jpg', alt='Win Diesel', width='280', height='480')
+          .card__description
+            h2.card__title Лжепётр Мчиславский
+            p.card__text.
+              Где я только ни стригся, но так как делаете это вы — не умеет никто другой! Еще раз спасибо и до скорого!
+            .card__options
+              .card__option
+                svg.card__option-icon(width='21', height='21')
+                  use(xlink:href='#icon-scissors')
+                span.card__option-label Стрижка
+              .card__option
+                svg.card__option-icon(width='24', height='22')
+                  use(xlink:href='#icon-beard')
+                span.card__option-label Борода
+              .card__option
+                svg.card__option-icon(width='45', height='14')
+                  use(xlink:href='#icon-mustache')
+                span.card__option-label Усы
+        article.catalog__card.card
+          .card__illustration
+            img(src='img/sasha-mobile@1x.jpg', alt='Sasha', width='280', height='176')
+          .card__description
+            h2.card__title Саша Мальцев
+            p.card__text.
+              Попросил омолодить и омолодили! Кто теперь скажет, что мне 45?
+            .card__options
+              .card__option
+                svg.card__option-icon(width='21', height='21')
+                  use(xlink:href='#icon-scissors')
+                span.card__option-label Стрижка
+        article.catalog__card.card
+          .card__illustration
+            img(src='img/vladimir-mobile@1x.jpg', alt='Vladimir', width='280', height='176')
+          .card__description
+            h2.card__title Владимир Иваныч
+            p.card__text.
+              К зимнему сезону — готов!
+            .card__options
+              .card__option
+                svg.card__option-icon(width='24', height='22')
+                  use(xlink:href='#icon-beard')
+                span.card__option-label Борода
+              .card__option
+                svg.card__option-icon(width='45', height='14')
+                  use(xlink:href='#icon-mustache')
+                span.card__option-label Усы
+        article.catalog__card.card
+          .card__illustration
+            img(src='img/winston-mobile@1x.jpg', alt='Win Diesel', width='280', height='176')
+          .card__description
+            h2.card__title Винстон Синий
+            p.card__text.
+              Как только заростаю и волосы начинают мешать видеть — бегом в Бородинский!
+            .card__options
+              .card__option
+                svg.card__option-icon(width='21', height='21')
+                  use(xlink:href='#icon-scissors')
+                span.card__option-label Стрижка
 
-      section.catalog
-        .container
-          article.catalog__card.card.card--main
-            .card__label
-              span.card__label-caption Работа месяца
-            .card__illustration
-              img(src='img/pyotr-mobile@1x.jpg', alt='Win Diesel', width='280', height='480')
-            .card__description
-              h2.card__title Лжепётр Мчиславский
-              p.card__text.
-                Где я только ни стригся, но так как делаете это вы — не умеет никто другой! Еще раз спасибо и до скорого!
-              .card__options
-                .card__option
-                  svg.card__option-icon(width='21', height='21')
-                    use(xlink:href='#icon-scissors')
-                  span.card__option-label Стрижка
-                .card__option
-                  svg.card__option-icon(width='24', height='22')
-                    use(xlink:href='#icon-beard')
-                  span.card__option-label Борода
-                .card__option
-                  svg.card__option-icon(width='45', height='14')
-                    use(xlink:href='#icon-mustache')
-                  span.card__option-label Усы
-          article.catalog__card.card
-            .card__illustration
-              img(src='img/sasha-mobile@1x.jpg', alt='Sasha', width='280', height='176')
-            .card__description
-              h2.card__title Саша Мальцев
-              p.card__text.
-                Попросил омолодить и омолодили! Кто теперь скажет, что мне 45?
-              .card__options
-                .card__option
-                  svg.card__option-icon(width='21', height='21')
-                    use(xlink:href='#icon-scissors')
-                  span.card__option-label Стрижка
-          article.catalog__card.card
-            .card__illustration
-              img(src='img/vladimir-mobile@1x.jpg', alt='Vladimir', width='280', height='176')
-            .card__description
-              h2.card__title Владимир Иваныч
-              p.card__text.
-                К зимнему сезону — готов!
-              .card__options
-                .card__option
-                  svg.card__option-icon(width='24', height='22')
-                    use(xlink:href='#icon-beard')
-                  span.card__option-label Борода
-                .card__option
-                  svg.card__option-icon(width='45', height='14')
-                    use(xlink:href='#icon-mustache')
-                  span.card__option-label Усы
-          article.catalog__card.card
-            .card__illustration
-              img(src='img/winston-mobile@1x.jpg', alt='Win Diesel', width='280', height='176')
-            .card__description
-              h2.card__title Винстон Синий
-              p.card__text.
-                Как только заростаю и волосы начинают мешать видеть — бегом в Бородинский!
-              .card__options
-                .card__option
-                  svg.card__option-icon(width='21', height='21')
-                    use(xlink:href='#icon-scissors')
-                  span.card__option-label Стрижка
-
-      section.price-list
-        .container
-          .price-list__wrapper
-            h2.price-list__title Прейскурант
-            table.price-list__table
-              tr
-                td.price-list__service
-                  b.price-list__service-name Классическая стрижка
-                  span.price-list__caption (с мытьём головы)
-                td.price-list__price 1 500 руб.
-              tr
-                td.price-list__service
-                  b.price-list__service-name Современный вариант
-                  span.price-list__caption (с мытьём головы)
-                td.price-list__price 1 500 руб.
-              tr
-                td.price-list__service
-                  b.price-list__service-name Индивидуальный подход
-                  span.price-list__caption (с мытьём головы)
-                td.price-list__price 2 000 руб.
-              tr
-                td.price-list__service
-                  b.price-list__service-name Бритьё головы
-                  span.price-list__caption (без мытья)
-                td.price-list__price 500 руб.
-              tr
-                td.price-list__service
-                  b.price-list__service-name Бритьё головы
-                  span.price-list__caption (с мытьём головы)
-                td.price-list__price 1 000 руб.
-            .price-list__clocks
-              svg.price-list__clock-icon(width='58', height='58')
-                use(xlink:href='#icon-clock')
-              p.price-list__clocks-text.
-                C 10:00 до 14:00 скидка 20%
-
-      include blocks/footer.pug
+    section.price-list
+      .container
+        .price-list__wrapper
+          h2.price-list__title Прейскурант
+          table.price-list__table
+            tr
+              td.price-list__service
+                b.price-list__service-name Классическая стрижка
+                span.price-list__caption (с мытьём головы)
+              td.price-list__price 1 500 руб.
+            tr
+              td.price-list__service
+                b.price-list__service-name Современный вариант
+                span.price-list__caption (с мытьём головы)
+              td.price-list__price 1 500 руб.
+            tr
+              td.price-list__service
+                b.price-list__service-name Индивидуальный подход
+                span.price-list__caption (с мытьём головы)
+              td.price-list__price 2 000 руб.
+            tr
+              td.price-list__service
+                b.price-list__service-name Бритьё головы
+                span.price-list__caption (без мытья)
+              td.price-list__price 500 руб.
+            tr
+              td.price-list__service
+                b.price-list__service-name Бритьё головы
+                span.price-list__caption (с мытьём головы)
+              td.price-list__price 1 000 руб.
+          .price-list__clocks
+            svg.price-list__clock-icon(width='58', height='58')
+              use(xlink:href='#icon-clock')
+            p.price-list__clocks-text.
+              C 10:00 до 14:00 скидка 20%

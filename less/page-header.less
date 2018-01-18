@@ -1,0 +1,154 @@
+.page-header {
+  position: relative;
+  width: 100%;
+  padding-bottom: 50px;
+  background-color: #242424;
+}
+
+.page-header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 27px 0;
+
+}
+
+.page-header__logo-icon {
+  &--tablet,
+  &--desktop {
+    display: none;
+  }
+}
+
+.page-header__nav-wrapper {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+
+.page-header__nav-wrapper--show {
+  .page-header__button-block {
+    order: 1;
+  }
+
+  .page-header__nav {
+    order: 2;
+  }
+}
+
+.page-header__nav {
+  width: 100%;
+}
+
+.page-header__menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  &--main {
+    background-color: #826550;
+  }
+
+  &--user {
+    background-color: #6a4d38;
+  }
+}
+
+.page-header__menu-item {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
+.page-header__menu-link {
+  display: inline-block;
+  padding-bottom: 13px;
+  font-weight: 600;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+  width: 100%;
+  padding-left: 20px;
+  padding-top: 13px;
+}
+
+.page-header__button-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  min-width: 70px;
+  height: 50px;
+  background-color: #6a4d38;
+}
+
+.page-header__burger {
+  width: 35px;
+  height: 30px;
+  position: relative;
+  margin: 50px auto;
+  background-color: transparent;
+  border: none;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+
+  span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 2px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+  }
+}
+
+// Burger animation
+
+.page-header__burger span:nth-child(1) {
+  top: 4px;
+}
+
+.page-header__burger span:nth-child(2),.page-header__burger span:nth-child(3) {
+  top: 14px;
+}
+
+.page-header__burger span:nth-child(4) {
+  top: 24px;
+}
+
+.page-header__burger--open span:nth-child(1) {
+  top: 14px;
+  width: 0%;
+  left: 50%;
+}
+
+.page-header__burger--open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.page-header__burger--open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.page-header__burger--open span:nth-child(4) {
+  top: 14px;
+  width: 0%;
+  left: 50%;
+}
