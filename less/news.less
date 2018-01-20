@@ -1,0 +1,43 @@
+.news {
+  padding-top: 72px;
+  padding-bottom: 28px;
+  border-bottom: 2px solid @border-color;
+}
+
+.news__title {
+  .title();
+
+  margin-top: 0;
+}
+
+.news__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+
+  &--29 {
+    border-bottom: 2px solid @border-color;
+  }
+
+  &--9 {
+    display: none;
+  }
+}
+
+.news__illustration {
+  width: 50px;
+  padding-top: 12px;
+}
+
+.news__text {
+  width: calc(100% - 50px);
+  padding-left: 20px;
+  margin: 0;
+}
+
+.news__button {
+  width: 100%;
+}

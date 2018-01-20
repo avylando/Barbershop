@@ -27,39 +27,39 @@ block content
               Мужская стрижка требует точного подхода.
               Обратимся к статистике:
           .head-block__stats
-            .head-block__stat-block
+            .head-block__stat-block.head-block__stat-block--price
               h2.head-block__stat-title 1 500 *
               p.head-block__stat-text рублей вложений
-            .head-block__stat-block
+            .head-block__stat-block.head-block__stat-block--time
               h2.head-block__stat-title 7 200
-              p.head-block__stat-text секунд времени мастера
-            .head-block__stat-block
+              p.head-block__stat-text секунд<br> времени мастера
+            .head-block__stat-block.head-block__stat-block--hair
               h2.head-block__stat-title 90 000
               p.head-block__stat-text постриженных волос
-            .head-block__stat-block
+            .head-block__stat-block.head-block__stat-block--likes
               h2.head-block__stat-title 500 000 *
               p.head-block__stat-text лайков и комплиментов
-          .head-block__joke
-            p.head-block__joke-text * - приведённые данные ложь
+            .head-block__stat-block.head-block__stat-block--joke
+              p.head-block__note * - приведённые данные ложь
 
     section.advantages
       .container
         .advantages__wrapper
-          .advantages__block
+          .advantages__block.advantages__block--fast
             .advantages__illustration
               img.advantages__icon(src='img/advantage-1.png', alt='Fast', width='95', height='94')
             h2.advantages__title Быстро
             p.advantages__text.
               Мы делаем свою работу быстро!
-              Два часа пролетят незаметно и Вы — счастливый обладатель стильной стрижки-минутки
-          .advantages__block
+              Два часа пролетят незаметно <br>и Вы — счастливый обладатель стильной стрижки-минутки
+          .advantages__block.advantages__block--cool
             .advantages__illustration
               img.advantages__icon(src='img/advantage-2.png', alt='Cool', width='95', height='88')
             h2.advantages__title Круто
             p.advantages__text.
               Забудьте, как вы стриглись раньше. Мы сделаем из Вас звезду футбола или кино.
               Во всяком случае внешне.
-          .advantages__block
+          .advantages__block.advantages__block--exp
             .advantages__illustration
               img.advantages__icon(src='img/advantage-3.png', alt='Expensive', width='95', height='91')
             h2.advantages__title Дорого
@@ -67,30 +67,30 @@ block content
               Наши мастера — профессионалы своего дела и не могут стоить дёшево.
               К тому же, разве цена не даёт определённый статус?
         .advantages__nav
-          ul.nav-list
+          ul.nav-list.nav-list--direct
+            li.nav-list__item.nav-list__item
+              a.nav-list__button.nav-list__button--active(href="#")
             li.nav-list__item
-              a(href="http://")
+              a.nav-list__button(href="#")
             li.nav-list__item
-              a(href="http://")
-            li.nav-list__item
-              a(href="http://")
+              a.nav-list__button(href="#")
 
     section.news
       .container
+        h2.news__title Новости и акции
         .news__wrapper
-          h2.news__title Новости и акции
-          .news__block
+          .news__block.news__block--29
             .news__illustration
               img.news__icon(src='img/calendar-1.png', alt='29 сентября', width='50', height='60')
             p.news__text.
               Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.
-          .news__block
+          .news__block.news__block--19
             .news__illustration
               img.news__icon(src='img/calendar-2.png', alt='19 сентября', width='50', height='60')
             p.news__text.
               В нашей команде пополнение, Борис «Бритва» Стригунец,
               обладатель множества титулов и наград пополнил наши стройные ряды. Спешите записаться!
-          .news__block
+          .news__block.news__block--9
             .news__illustration
               img.news__icon(src='img/calendar-3.png', alt='9 сентября', width='50', height='60')
             p.news__text.
@@ -101,31 +101,31 @@ block content
 
     section.reviews
       .container
-        h2.rewiews__title Отзывы о нас
+        h2.reviews__title Отзывы о нас
         .reviews__wrapper
-          .reviews__block
+          .reviews__block.reviews__block--1
             img.reviews__image(src='img/tattoo-man-mobile@1x.jpg', alt='Трэвис Баркер', width='50', height='49')
-            .reviews__block
+            .reviews__content
               h3.reviews__name Трэвис Баркер
               p.reviews__text.
                 Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!
-          .reviews__block
+          .reviews__block.reviews__block--2
             img.reviews__image(src='img/tattoo-man-mobile@1x.jpg', alt='Трэвис Баркер', width='50', height='49')
-            .reviews__block
+            .reviews__content
               h3.reviews__name Трэвис Баркер
               p.reviews__text.
                 Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!
-          .reviews__block
+          .reviews__block.reviews__block--3
             img.reviews__image(src='img/tattoo-man-mobile@1x.jpg', alt='Трэвис Баркер', width='50', height='49')
-            .reviews__block
+            .reviews__content
               h3.reviews__name Трэвис Баркер
               p.reviews__text.
                 Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!
         .reviews__nav
-          ul.nav-list
+          ul.nav-list.nav-list--reverse
+            li.nav-list__item.nav-list__item
+              a.nav-list__button.nav-list__button--active(href="#")
             li.nav-list__item
-              a(href="http://")
+              a.nav-list__button(href="#")
             li.nav-list__item
-              a(href="http://")
-            li.nav-list__item
-              a(href="http://")
+              a.nav-list__button(href="#")

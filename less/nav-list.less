@@ -1,0 +1,50 @@
+.nav-list {
+  text-align: center;
+
+  .list-unstyle();
+
+  &--direct {
+    .nav-list__button {
+      border: 1px solid #959595;
+      box-shadow: inset 0 0 0 1px #a5a5a5;
+
+      &--active {
+        border: 1px solid #cccccc;
+        box-shadow: none;
+        background-color: #ffffff;
+      }
+    }
+  }
+
+  &--reverse {
+    .nav-list__button {
+      border: 1px solid #939290;
+      box-shadow: inset 0 0 0 1px #858483;
+
+      &--active {
+        border: 1px solid #626261;
+        box-shadow: none;
+        background-color: #353535;
+      }
+    }
+  }
+}
+
+.nav-list__item {
+  display: inline-block;
+}
+
+.nav-list__button {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border: 2px solid #a5a5a5;
+  transform: rotate(45deg);
+  margin-left: 10px;
+  margin-right: 10px;
+
+  &--active {
+    border: none;
+    background-color: #ffffff;
+  }
+}

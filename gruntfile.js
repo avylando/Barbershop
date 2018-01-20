@@ -8,8 +8,12 @@ module.exports = function (grunt) {
   grunt.initConfig({
     less: {
       style: {
+        options: {
+          strictMath: true
+        },
+
         files: {
-          "build/css/style.css": "less/style.less"
+          "build/css/style.css": "less/main.less"
         }
       }
     },
@@ -114,8 +118,8 @@ module.exports = function (grunt) {
         watchTask: true,
         notify: false,
         open: true,
-        cors: true,
-        ui: false
+        cors: true
+        // ui: false
       }
     },
 

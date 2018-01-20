@@ -10,17 +10,18 @@ footer.page-footer
         span.page-footer__friendly Давайте дружить!
         ul.page-footer__social-list.social-list
           li.social-list__item
-            a.social-list__link(href="http://")
+            a.social-list__link.social-list__link--vk(href="http://")
               svg.social-list__icon(width='38', height='30')
                 use(xlink:href='#icon-vk')
           li.social-list__item
-            a.social-list__link(href="http://")
+            a.social-list__link.social-list__link--fb(href="http://")
               svg.social-list__icon(width='20', height='40')
                 use(xlink:href='#icon-fb')
           li.social-list__item
-            a.social-list__link(href="http://")
+            a.social-list__link.social-list__link--inst(href="http://")
               svg.social-list__icon(width='37', height='38')
                 use(xlink:href='#icon-inst')
       .page-footer__block.page-footer__block--copyright
-        .page-footer__developed Разработано
-        .page-footer__academy HTML Academy
+        .page-footer__developed Разработано:
+        .page-footer__academy
+          a.page-footer__link(href="https://htmalacademy.ru") HTML Academy
