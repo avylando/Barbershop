@@ -30,7 +30,7 @@ body {
   line-height: 27px;
   color: #000000;
   background-color: #f8f5f2;
-  width: 320px;
+  // width: 320px;
 }
 
 img {
@@ -59,8 +59,7 @@ a {
   margin: 0 auto;
   // !
 
-  padding-left: 20px;
-  padding-right: 20px;
+  .pad-set(20px);
 }
 
 .button {
@@ -69,10 +68,17 @@ a {
   line-height: 24px;
   font-weight: 700;
   text-transform: uppercase;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 11px;
+  padding-bottom: 11px;
   border: 2px solid @border-color;
   background-color: transparent;
   outline: none;
   cursor: pointer;
+}
+
+
+@media (min-width: @tablet-width) {
+  .container {
+    .pad-set(64px);
+  }
 }

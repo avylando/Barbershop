@@ -1,0 +1,48 @@
+.models-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.models-list__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33%;
+  margin-bottom: 28px;
+}
+
+.models-list__label {
+  position: relative;
+  line-height: 24px;
+  text-transform: lowercase;
+  text-align: center;
+  width: 100%;
+  padding-top: 67px;
+  margin-bottom: 12px;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    border: 1px solid @border-color;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+}
+
+.models-list__input {
+  display: none;
+}
+
+.models-list__input:checked + .models-list__label::before {
+  background-image: url('../img/check-pin.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+}

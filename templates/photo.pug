@@ -26,9 +26,10 @@ block content
     section.catalog
       .container
         article.catalog__card.card.card--main
-          .card__label
-            span.card__label-caption Работа месяца
+
           .card__illustration
+            .card__label
+              span.card__label-caption Работа месяца
             img(src='img/pyotr-mobile@1x.jpg', alt='Win Diesel', width='280', height='480')
           .card__description
             h2.card__title Лжепётр Мчиславский
@@ -43,7 +44,7 @@ block content
                 svg.card__option-icon(width='24', height='22')
                   use(xlink:href='#icon-beard')
                 span.card__option-label Борода
-              .card__option
+              .card__option.card__option--mustache
                 svg.card__option-icon(width='45', height='14')
                   use(xlink:href='#icon-mustache')
                 span.card__option-label Усы
@@ -71,7 +72,7 @@ block content
                 svg.card__option-icon(width='24', height='22')
                   use(xlink:href='#icon-beard')
                 span.card__option-label Борода
-              .card__option
+              .card__option.card__option--mustache
                 svg.card__option-icon(width='45', height='14')
                   use(xlink:href='#icon-mustache')
                 span.card__option-label Усы
