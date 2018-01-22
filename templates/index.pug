@@ -28,7 +28,7 @@ block content
               Обратимся к статистике:
           .head-block__stats
             .head-block__stat-block.head-block__stat-block--price
-              h2.head-block__stat-title 1 500 *
+              h2.head-block__stat-title 1 500 <small>*</small>
               p.head-block__stat-text рублей вложений
             .head-block__stat-block.head-block__stat-block--time
               h2.head-block__stat-title 7 200
@@ -37,7 +37,7 @@ block content
               h2.head-block__stat-title 90 000
               p.head-block__stat-text постриженных волос
             .head-block__stat-block.head-block__stat-block--likes
-              h2.head-block__stat-title 500 000 *
+              h2.head-block__stat-title 500 000 <small>*</small>
               p.head-block__stat-text лайков и комплиментов
             .head-block__stat-block.head-block__stat-block--joke
               p.head-block__note * - приведённые данные ложь
@@ -48,24 +48,27 @@ block content
           .advantages__block.advantages__block--fast
             .advantages__illustration
               img.advantages__icon(src='img/advantage-1.png', alt='Fast', width='95', height='94')
-            h2.advantages__title Быстро
-            p.advantages__text.
-              Мы делаем свою работу быстро!
-              Два часа пролетят незаметно <br>и Вы — счастливый обладатель стильной стрижки-минутки
+            .advantages__description
+              h2.advantages__title Быстро
+              p.advantages__text.
+                Мы делаем свою работу быстро!
+                Два часа пролетят незаметно <br>и Вы — счастливый обладатель стильной стрижки-минутки
           .advantages__block.advantages__block--cool
             .advantages__illustration
               img.advantages__icon(src='img/advantage-2.png', alt='Cool', width='95', height='88')
-            h2.advantages__title Круто
-            p.advantages__text.
-              Забудьте, как вы стриглись раньше. Мы сделаем из Вас звезду футбола или кино.
-              Во всяком случае внешне.
+            .advantages__description
+              h2.advantages__title Круто
+              p.advantages__text.
+                Забудьте, как вы стриглись раньше. Мы сделаем из Вас звезду футбола или кино.
+                Во всяком случае внешне.
           .advantages__block.advantages__block--exp
             .advantages__illustration
               img.advantages__icon(src='img/advantage-3.png', alt='Expensive', width='95', height='91')
-            h2.advantages__title Дорого
-            p.advantages__text.
-              Наши мастера — профессионалы своего дела и не могут стоить дёшево.
-              К тому же, разве цена не даёт определённый статус?
+            .advantages__description
+              h2.advantages__title Дорого
+              p.advantages__text.
+                Наши мастера — профессионалы своего дела и не могут стоить дёшево.
+                К тому же, разве цена не даёт определённый статус?
         .advantages__nav
           ul.nav-list.nav-list--direct
             li.nav-list__item.nav-list__item
