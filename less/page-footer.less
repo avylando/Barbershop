@@ -7,28 +7,28 @@
 .page-footer__block {
   text-align: center;
 
-  .pad-reset(-20px);
-
   &--contacts {
+    .pad-reset(-20px);
     .pad-set(20px);
     padding-top: 25px;
     padding-bottom: 25px;
-    border-top: 2px solid #353535;
+    border-top: 1px solid #353535;
   }
 
   &--social {
-    border-top: 2px solid #353535;
-    border-bottom: 2px solid #353535;
+    .pad-reset(-20px);
+    border-top: 1px solid #353535;
+    border-bottom: 1px solid #353535;
   }
 
   &--copyright {
-    .pad-set(20px);
     padding-top: 30px;
     padding-bottom: 25px;
   }
 }
 
 .page-footer__title {
+  font-size: 18px;
   font-weight: 700;
   margin-top: 0;
 }
@@ -43,8 +43,12 @@
   width: 100%;
   padding-top: 15px;
   padding-bottom: 15px;
-  border-top: 2px solid #353535;
-  border-bottom: 2px solid #353535;
+  border-top: 1px solid #353535;
+  border-bottom: 1px solid #353535;
+
+  span {
+    display: none;
+  }
 }
 
 .page-footer__friendly {
@@ -60,6 +64,70 @@
   width: 100%;
   padding-top: 15px;
   padding-bottom: 15px;
-  border-top: 2px solid #353535;
-  border-bottom: 2px solid #353535;
+  border-top: 1px solid #353535;
+  border-bottom: 1px solid #353535;
+}
+
+
+@media (min-width:@tablet-width) {
+  .page-footer__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .page-footer__block {
+    margin-bottom: 50px;
+
+    &--contacts {
+      order: 1;
+      text-align: left;
+      width: 50%;
+      padding: 0;
+      margin-left: 0;
+      margin-right: 0;
+      border: none;
+    }
+
+    &--social {
+      order: 3;
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 60px;
+    }
+
+    &--copyright {
+      order: 2;
+      width: 25%;
+      padding: 0;
+    }
+  }
+
+  .page-footer__title {
+    text-transform: uppercase;
+  }
+
+  .page-footer__adress {
+    width: 100%;
+    margin: 0;
+  }
+
+  .page-footer__phone {
+    font-weight: 300;
+    padding: 0;
+    border: none;
+
+    span {
+      display: inline;
+    }
+  }
+
+  .page-footer__link {
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid #353535;
+  }
 }

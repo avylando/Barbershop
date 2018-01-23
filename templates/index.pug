@@ -1,17 +1,18 @@
-extends blocks/layout.pug
+extends blocks/layout
 block title
   title Барбершоп "Бородинский"
 block menu
-  li.page-header__menu-item.page-header__menu-item--active
-    a.page-header__menu-link(href="index.html") Главная
-  li.page-header__menu-item
-    a.page-header__menu-link(href="photo.html") Наши работы
-  li.page-header__menu-item
-    a.page-header__menu-link(href="form.html") Записаться
-  li.page-header__menu-item
-    a.page-header__menu-link(href="http://") Контакты
-  li.page-header__menu-item
-    a.page-header__menu-link(href="http://") HTML Academy
+  -var pageID = 0
+//-   li.page-header__menu-item.page-header__menu-item--active
+//-     a.page-header__menu-link(href="index.html") Главная
+//-   li.page-header__menu-item
+//-     a.page-header__menu-link(href="photo.html") Наши работы
+//-   li.page-header__menu-item
+//-     a.page-header__menu-link(href="form.html") Записаться
+//-   li.page-header__menu-item
+//-     a.page-header__menu-link(href="http://") Контакты
+//-   li.page-header__menu-item
+//-     a.page-header__menu-link(href="http://") HTML Academy
 block content
   main
     div(style="display: none")
@@ -80,7 +81,9 @@ block content
 
     section.news
       .container
-        h2.news__title Новости и акции
+        .news__head
+          h2.news__title Новости и акции
+          button.news__button.button(type='button') Показать все
         .news__wrapper
           .news__block.news__block--29
             .news__illustration
@@ -99,31 +102,38 @@ block content
             p.news__text.
               Все дорожает, а наши стрижки нет! Как так?
               Приходите, постригитесь и узнаете, в чем здесь подвох!
-          .news__button-block
-            button.news__button.button(type='button') Показать все
 
     section.reviews
       .container
-        h2.reviews__title Отзывы о нас
+        .reviews__head
+          h2.reviews__title Отзывы о нас
+          button.reviews__button.button(type='button') Оставить свой
         .reviews__wrapper
-          .reviews__block.reviews__block--1
-            img.reviews__image(src='img/tattoo-man-mobile@1x.jpg', alt='Трэвис Баркер', width='50', height='49')
-            .reviews__content
-              h3.reviews__name Трэвис Баркер
-              p.reviews__text.
-                Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!
-          .reviews__block.reviews__block--2
-            img.reviews__image(src='img/tattoo-man-mobile@1x.jpg', alt='Трэвис Баркер', width='50', height='49')
-            .reviews__content
-              h3.reviews__name Трэвис Баркер
-              p.reviews__text.
-                Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!
-          .reviews__block.reviews__block--3
-            img.reviews__image(src='img/tattoo-man-mobile@1x.jpg', alt='Трэвис Баркер', width='50', height='49')
-            .reviews__content
-              h3.reviews__name Трэвис Баркер
-              p.reviews__text.
-                Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!
+          .reviews__control.reviews__control--left
+            svg.reviews__arrow.reviews__arrow--left(width='12', height='12')
+              polygon(points='0,6 12,0 12,12', fill='#000000')
+          .reviews__slides
+            .reviews__block.reviews__block--1
+              img.reviews__image(src='img/tattoo-man-mobile@1x.jpg', alt='Трэвис Баркер', width='50', height='49')
+              .reviews__content
+                h3.reviews__name Трэвис Баркер
+                p.reviews__text.
+                  Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!
+            .reviews__block.reviews__block--2
+              img.reviews__image(src='img/tattoo-man-mobile@1x.jpg', alt='Трэвис Баркер', width='50', height='49')
+              .reviews__content
+                h3.reviews__name Трэвис Баркер
+                p.reviews__text.
+                  Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!
+            .reviews__block.reviews__block--3
+              img.reviews__image(src='img/tattoo-man-mobile@1x.jpg', alt='Трэвис Баркер', width='50', height='49')
+              .reviews__content
+                h3.reviews__name Трэвис Баркер
+                p.reviews__text.
+                  Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!
+          .reviews__control.reviews__control--right
+            svg.reviews__arrow.reviews__arrow--right(width='12', height='12')
+              polygon(points='12,6 0,0 0,12', fill='#000000')
         .reviews__nav
           ul.nav-list.nav-list--reverse
             li.nav-list__item.nav-list__item

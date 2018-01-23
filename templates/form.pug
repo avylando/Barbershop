@@ -2,16 +2,7 @@ extends blocks/layout.pug
 block title
   title Записаться
 block menu
-  li.page-header__menu-item
-    a.page-header__menu-link(href="index.html") Главная
-  li.page-header__menu-item
-    a.page-header__menu-link(href="photo.html") Наши работы
-  li.page-header__menu-item.page-header__menu-item--active
-    a.page-header__menu-link(href="form.html") Записаться
-  li.page-header__menu-item
-    a.page-header__menu-link(href="http://") Контакты
-  li.page-header__menu-item
-    a.page-header__menu-link(href="http://") HTML Academy
+  - var pageID = 2
 block content
 
   main

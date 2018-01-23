@@ -1,17 +1,8 @@
-extends blocks/layout.pug
+extends blocks/layout
 block title
   title Наши работы
 block menu
-  li.page-header__menu-item
-    a.page-header__menu-link(href="index.html") Главная
-  li.page-header__menu-item.page-header__menu-item--active
-    a.page-header__menu-link(href="photo.html") Наши работы
-  li.page-header__menu-item
-    a.page-header__menu-link(href="form.html") Записаться
-  li.page-header__menu-item
-    a.page-header__menu-link(href="http://") Контакты
-  li.page-header__menu-item
-    a.page-header__menu-link(href="http://") HTML Academy
+  - var pageID = 1
 block content
   main
     div(style="display: none")
@@ -35,19 +26,19 @@ block content
             h2.card__title Лжепётр Мчиславский
             p.card__text.
               Где я только ни стригся, но так как делаете это вы — не умеет никто другой! Еще раз спасибо и до скорого!
-            .card__options
-              .card__option
-                svg.card__option-icon(width='21', height='21')
-                  use(xlink:href='#icon-scissors')
-                span.card__option-label Стрижка
-              .card__option
-                svg.card__option-icon(width='24', height='22')
-                  use(xlink:href='#icon-beard')
-                span.card__option-label Борода
-              .card__option.card__option--mustache
-                svg.card__option-icon(width='45', height='14')
-                  use(xlink:href='#icon-mustache')
-                span.card__option-label Усы
+          .card__options
+            .card__option
+              svg.card__option-icon(width='21', height='21')
+                use(xlink:href='#icon-scissors')
+              span.card__option-label Стрижка
+            .card__option
+              svg.card__option-icon(width='24', height='22')
+                use(xlink:href='#icon-beard')
+              span.card__option-label Борода
+            .card__option.card__option--mustache
+              svg.card__option-icon(width='45', height='14')
+                use(xlink:href='#icon-mustache')
+              span.card__option-label Усы
         article.catalog__card.card
           .card__illustration
             img(src='img/sasha-mobile@1x.jpg', alt='Sasha', width='280', height='176')
@@ -55,11 +46,11 @@ block content
             h2.card__title Саша Мальцев
             p.card__text.
               Попросил омолодить и омолодили! Кто теперь скажет, что мне 45?
-            .card__options
-              .card__option
-                svg.card__option-icon(width='21', height='21')
-                  use(xlink:href='#icon-scissors')
-                span.card__option-label Стрижка
+          .card__options
+            .card__option
+              svg.card__option-icon(width='21', height='21')
+                use(xlink:href='#icon-scissors')
+              span.card__option-label Стрижка
         article.catalog__card.card
           .card__illustration
             img(src='img/vladimir-mobile@1x.jpg', alt='Vladimir', width='280', height='176')
@@ -67,15 +58,15 @@ block content
             h2.card__title Владимир Иваныч
             p.card__text.
               К зимнему сезону — готов!
-            .card__options
-              .card__option
-                svg.card__option-icon(width='24', height='22')
-                  use(xlink:href='#icon-beard')
-                span.card__option-label Борода
-              .card__option.card__option--mustache
-                svg.card__option-icon(width='45', height='14')
-                  use(xlink:href='#icon-mustache')
-                span.card__option-label Усы
+          .card__options
+            .card__option
+              svg.card__option-icon(width='24', height='22')
+                use(xlink:href='#icon-beard')
+              span.card__option-label Борода
+            .card__option.card__option--mustache
+              svg.card__option-icon(width='45', height='14')
+                use(xlink:href='#icon-mustache')
+              span.card__option-label Усы
         article.catalog__card.card
           .card__illustration
             img(src='img/winston-mobile@1x.jpg', alt='Win Diesel', width='280', height='176')
@@ -83,11 +74,11 @@ block content
             h2.card__title Винстон Синий
             p.card__text.
               Как только заростаю и волосы начинают мешать видеть — бегом в Бородинский!
-            .card__options
-              .card__option
-                svg.card__option-icon(width='21', height='21')
-                  use(xlink:href='#icon-scissors')
-                span.card__option-label Стрижка
+          .card__options
+            .card__option
+              svg.card__option-icon(width='21', height='21')
+                use(xlink:href='#icon-scissors')
+              span.card__option-label Стрижка
 
     section.price-list
       .container
