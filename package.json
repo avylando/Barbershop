@@ -34,7 +34,9 @@
     "grunt-cwebp": "^2.1.0",
     "grunt-postcss": "^0.9.0",
     "grunt-svgstore": "^1.0.0",
-    "load-grunt-tasks": "^3.5.2"
+    "load-grunt-tasks": "^3.5.2",
+    "stylelint-config-htmlacademy": "^0.1.1",
+    "stylelint-config-standard": "^18.0.0"
   },
   "dependencies": {}
 }

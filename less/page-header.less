@@ -254,16 +254,10 @@
 }
 
 .page-header__burger--open span:nth-child(2) {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
 .page-header__burger--open span:nth-child(3) {
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
@@ -276,9 +270,13 @@
 
 @media (min-width: @tablet-width) {
   .page-header {
-    padding-top: 100px;
-    padding-bottom: 165px;
+    padding-top: 106px;
+    padding-bottom: 73px;
     background-image: url('../img/bg-tablet@1x.jpg');
+
+    &--index {
+      padding-bottom: 250px;
+    }
   }
 
   .page-header__wrapper {
@@ -287,7 +285,7 @@
   }
 
   .page-header__logo {
-
+    padding: 0;
   }
 
   .page-header__logo-icon {
@@ -328,6 +326,8 @@
 
     &--user {
       width: 8%;
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .page-header__menu-item {
@@ -345,11 +345,6 @@
       padding-left: 0;
       padding-top: 24px;
       padding-bottom: 24px;
-    }
-
-    &--user {
-      opacity: 1;
-      transform: translateY(0);
     }
   }
 
