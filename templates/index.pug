@@ -1,8 +1,10 @@
 extends blocks/layout
 block title
   title Барбершоп "Бородинский"
-block menu
-  -var pageID = 0;
+block prepend head
+  -var headerClass = 'page-header--index';
+  block menu
+    -var pageID = 0;
 block content
   main
     div(style="display: none")

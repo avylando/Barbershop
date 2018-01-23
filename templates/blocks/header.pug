@@ -1,35 +1,36 @@
 include mixins
 
-header(class='page-header')
-  .container
-    .page-header__wrapper
-      .page-header__logo
-        svg.page-header__logo-icon.page-header__logo-icon--mobile(width='227', height='30')
-          use(xlink:href='#logo-mobile')
-        svg.page-header__logo-icon.page-header__logo-icon--tablet(width='375', height='110')
-          use(xlink:href='#logo-tablet')
-        svg.page-header__logo-icon.page-header__logo-icon--desktop
-          use(xlink:href='#logo-desktop')
-      .page-header__nav-wrapper
+block head
+  header(class='page-header' class= headerClass)
+    .container
+      .page-header__wrapper
+        .page-header__logo
+          svg.page-header__logo-icon.page-header__logo-icon--mobile(width='227', height='30')
+            use(xlink:href='#logo-mobile')
+          svg.page-header__logo-icon.page-header__logo-icon--tablet(width='375', height='110')
+            use(xlink:href='#logo-tablet')
+          svg.page-header__logo-icon.page-header__logo-icon--desktop
+            use(xlink:href='#logo-desktop')
+        .page-header__nav-wrapper
 
-        nav.page-header__nav
-          block menu
-          - var nav = [{url: 'index.html', name: 'Главная'}, {url: 'photo.html', name: 'Наши работы'}, {url: 'form.html', name: 'Записаться'}, {url: '#', name: 'Контакты'}, {url: 'https://htmlacademy.ru', name: 'HTML Academy'}];
-              ul.page-header__menu.page-header__menu--main
-                each i, index in nav
-                  +addMenuItem(pageID, i, index)
+          nav.page-header__nav
+            block menu
+            - var nav = [{url: 'index.html', name: 'Главная'}, {url: 'photo.html', name: 'Наши работы'}, {url: 'form.html', name: 'Записаться'}, {url: '#', name: 'Контакты'}, {url: 'https://htmlacademy.ru', name: 'HTML Academy'}];
+                ul.page-header__menu.page-header__menu--main
+                  each i, index in nav
+                    +addMenuItem(pageID, i, index)
 
-          ul.page-header__menu.page-header__menu--user
-            li.page-header__menu-item.page-header__menu-item--login
-              a.page-header__menu-link(href="#")
-                img.page-header__menu-icon(src='img/login-icon.png', width='16', height='16')
-                span.page-header__login-label Вход
-            li.page-header__menu-item
-              a.page-header__menu-link(href="#")
+            ul.page-header__menu.page-header__menu--user
+              li.page-header__menu-item.page-header__menu-item--login
+                a.page-header__menu-link(href="#")
+                  img.page-header__menu-icon(src='img/login-icon.png', width='16', height='16')
+                  span.page-header__login-label Вход
+              li.page-header__menu-item
+                a.page-header__menu-link(href="#")
 
-        .page-header__button-block
-          button.page-header__burger(type='button')
-            span
-            span
-            span
-            span
+          .page-header__button-block
+            button.page-header__burger(type='button')
+              span
+              span
+              span
+              span
