@@ -118,7 +118,10 @@ block content
                 p.reviews__text.
                   Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!
             .reviews__block.reviews__block--3
-              img.reviews__image(src='img/tattoo-man-mobile@1x.jpg', alt='Трэвис Баркер', width='50', height='49')
+              picture
+                source(media='min-width: 1200px', srcset='img/tattoo-man-desktop@1x.jpg 1x, img/tattoo-man-desktop@2x.jpg 2x')
+                source(media='min-width: 780px', srcset='img/tattoo-man-tablet@1x.png 1x, img/tattoo-man-tablet@2x.png 2x')
+                img.reviews__image(src='img/tattoo-man-mobile@1x.jpg', srcset='img/tattoo-man-mobile@2x.jpg 2x' alt='Трэвис Баркер', width='50', height='49')
               .reviews__content
                 h3.reviews__name Трэвис Баркер
                 p.reviews__text.

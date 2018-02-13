@@ -119,3 +119,36 @@
     background-color: #f8f5f2;
   }
 }
+
+@media (min-width: @desktop-width) {
+  .reviews__slides {
+    .pad-set(0);
+    .pad-reset(20px);
+    border-left: 1px solid @border-color;
+    border-right: 1px solid @border-color;
+  }
+
+  .reviews__block {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+  }
+
+  .reviews__image {
+    width: 250px;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .reviews__content {
+    width: 500px;
+    padding-left: 70px;
+  }
+
+  .reviews__nav {
+    position: static;
+    margin-top: 40px;
+  }
+
+
+}

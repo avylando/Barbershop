@@ -22,6 +22,11 @@
   }
 }
 
+.price-list__number,
+.price-list__note {
+  display: none;
+}
+
 .price-list__service {
   vertical-align: top;
 }
@@ -40,4 +45,85 @@
 
 .price-list__clocks-text {
   width: 60%;
+}
+
+@media (min-width: @tablet-width) {
+  .price-list {
+    padding-top: 83px;
+    padding-bottom: 55px;
+  }
+
+  .price-list__title {
+    margin-bottom: 50px;
+  }
+
+  .price-list__table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #4a4a4a;
+
+    tr {
+      height: 55px;
+      border-bottom: 1px solid #4a4a4a;
+    }
+
+    td {
+      vertical-align: middle;
+      padding-left: 20px;
+      border-right: 1px solid #4a4a4a;
+    }
+
+    .price-list__number {
+      padding-left: 0;
+    }
+  }
+
+  .price-list__number,
+  .price-list__note {
+    display: table-cell;
+  }
+
+  .price-list__number {
+    color: rgba(255, 255, 255, 0.3);
+    text-align: center;
+    width: 70px;
+  }
+
+  .price-list__note {
+    width: 160px;
+  }
+
+  .price-list__caption {
+    display: none;
+  }
+
+  .price-list__price {
+    text-align: left;
+    width: 160px;
+  }
+
+  .price-list__clocks {
+    position: relative;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 10px;
+    border: 1px solid #4a4a4a;
+  }
+
+  .price-list__clock-icon {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    width: 72px;
+    height: 72px;
+  }
+
+  .price-list__clocks-text {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: center;
+    width: calc(100% - 157px);
+  }
 }

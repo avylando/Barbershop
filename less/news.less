@@ -91,3 +91,18 @@
     border: none;
   }
 }
+
+@media (min-width: @desktop-width) {
+  .news__block {
+    justify-content: flex-start;
+    width: 33.33%;
+
+    &--9 {
+      display: flex;
+    }
+  }
+
+  .news__text {
+    width: 240px;
+  }
+}

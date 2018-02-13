@@ -300,7 +300,9 @@
 
   .page-header__nav-wrapper {
     position: fixed;
+    z-index: 1000;
     top: 0;
+    left: 0;
     bottom: auto;
     background-color: #000000;
 
@@ -362,6 +364,24 @@
       border: none;
       padding-top: 24px;
       padding-bottom: 24px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__login-label {
+    display: inline;
+  }
+
+  .page-header__logo-icon {
+    width: 375px;
+
+    &--tablet {
+      display: none;
+    }
+
+    &--desktop {
+      display: block;
     }
   }
 }

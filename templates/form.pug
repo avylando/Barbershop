@@ -9,13 +9,14 @@ block content
     div(style="display: none")
       include ../img/sprite.svg
 
-    .container
-      section.title-block
+    section.title-block
+      .container
         .title-block__wrapper
-          h1.title-block__title Записаться
+          h1.title-block__title Запись на стрижку
           a(href="index.html").title-block__button.button На главную
 
-      section.fields
+    section.fields
+      .container
         form.fields__form(action='https://echo.htmlacademy.ru', method='get')
           .fields__wrapper
             .fields__set.fields__set--personal
@@ -23,8 +24,8 @@ block content
               input.fields__textfield.fields__textfield--surname(type="text", name="surname", placeholder="Фамилия")
               input.fields__textfield.fields__textfield--secondname(type="text", name="secondname", placeholder="Отчество")
             .fields__set.fields__set--contacts
-              input.fields__textfield(type="text", name="phone", placeholder="Контактный телефон")
-              input.fields__textfield(type="text", name="email", placeholder="Контактный e-mail")
+              input.fields__textfield.fields__textfield--phone(type="text", name="phone", placeholder="Контактный телефон")
+              input.fields__textfield.fields__textfield--email(type="text", name="email", placeholder="Контактный e-mail")
             .fields__set.fields__set--textarea
               textarea.fields__textarea(placeholder="Доп. информация для мастера")
             .fields__set.fields__set--model
